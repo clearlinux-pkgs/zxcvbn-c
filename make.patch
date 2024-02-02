@@ -8,9 +8,9 @@
 +install:
 +	mkdir -p $(DESTDIR)/usr/lib64
 +	mkdir -p $(DESTDIR)/usr/bin
-+	mkdir -p $(DESTDIR)/usr/include/zxcvbn
++	mkdir -p $(DESTDIR)/usr/include
 +	mkdir -p $(DESTDIR)/usr/share/zxcvbn
-+	install -p -m 0644 *.h $(DESTDIR)/usr/include/zxcvbn
++	install -p -m 0644 *.h $(DESTDIR)/usr/include
 +	cp -a libzxcvbn.so* $(DESTDIR)/usr/lib64
 +	install -p -m 0755 dictgen $(DESTDIR)/usr/bin
 +	install -p -m 0644 zxcvbn.dict $(DESTDIR)/usr/share/zxcvbn	

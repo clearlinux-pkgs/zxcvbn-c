@@ -7,7 +7,7 @@
 #
 Name     : zxcvbn-c
 Version  : 2.5
-Release  : 1
+Release  : 2
 URL      : https://github.com/tsyrogit/zxcvbn-c/archive/refs/tags/v2.5.tar.gz
 Source0  : https://github.com/tsyrogit/zxcvbn-c/archive/refs/tags/v2.5.tar.gz
 Summary  : A library for password entropy checking
@@ -85,7 +85,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1706902607
+export SOURCE_DATE_EPOCH=1706903394
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -118,7 +118,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1706902607
+export SOURCE_DATE_EPOCH=1706903394
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/zxcvbn-c
 cp %{_builddir}/zxcvbn-c-%{version}/LICENSE.txt %{buildroot}/usr/share/package-licenses/zxcvbn-c/ea25421833f68a72196dbfec95f6e2f5f7d3a383 || :
@@ -137,9 +137,9 @@ cp %{_builddir}/zxcvbn-c-%{version}/LICENSE.txt %{buildroot}/usr/share/package-l
 
 %files dev
 %defattr(-,root,root,-)
-/usr/include/zxcvbn/dict-crc.h
-/usr/include/zxcvbn/dict-src.h
-/usr/include/zxcvbn/zxcvbn.h
+/usr/include/dict-crc.h
+/usr/include/dict-src.h
+/usr/include/zxcvbn.h
 /usr/lib64/libzxcvbn.so
 
 %files lib
