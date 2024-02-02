@@ -1,0 +1,19 @@
+--- zxcvbn-c-2.5/makefile~	2022-04-07 17:19:00.000000000 +0000
++++ zxcvbn-c-2.5/makefile	2024-02-02 19:35:15.050046614 +0000
+@@ -100,6 +100,16 @@
+ 	@echo Testing C++ build, dictionary in executable
+ 	./test-c++inline -t testcases.txt
+ 	@echo Finished
++	
++install:
++	mkdir -p $(DESTDIR)/usr/lib64
++	mkdir -p $(DESTDIR)/usr/bin
++	mkdir -p $(DESTDIR)/usr/include/zxcvbn
++	mkdir -p $(DESTDIR)/usr/share/zxcvbn
++	install -p -m 0644 *.h $(DESTDIR)/usr/include/zxcvbn
++	cp -a libzxcvbn.so* $(DESTDIR)/usr/lib64
++	install -p -m 0755 dictgen $(DESTDIR)/usr/bin
++	install -p -m 0644 zxcvbn.dict $(DESTDIR)/usr/share/zxcvbn	
+ 
+ clean:
+ 	rm -f test-file zxcvbn-file.o test-c++file zxcvbn-c++file.o 
